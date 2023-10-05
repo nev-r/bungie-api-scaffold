@@ -34,6 +34,7 @@ declare const BUNGIE_APP_INFO: {
 ```
 - set `isolatedModules` to `false` in `tsconfig.json`
 - overwrite `src/App.tsx` with [the one in this repo](https://raw.githubusercontent.com/nev-r/bungie-api-scaffold/main/src/App.tsx)
+- make your `vite.config.ts` look like [this one](https://github.com/nev-r/bungie-api-scaffold/blob/main/vite.config.ts)
 - configure your `BUNGIE_APP_INFO` in `vite.config.ts`
 - optionally, configure your app for OAuth at https://www.bungie.net/en/Application
   - OAuth Client Type
