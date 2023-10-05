@@ -143,7 +143,7 @@ function KineticEquipment() {
 }
 
 /**
- * asdasd 37131
+ * show oauth setup, then later, do some stuff that demonstrates we have working oauth
  */
 function OAuthStuff() {
   const [completedAuthBnetUser, setCompletedAuthBnetUser] = useState("");
@@ -261,6 +261,7 @@ function BungieName({ bnetMembershipId }: { bnetMembershipId: string }) {
   return `${bnetUser.cachedBungieGlobalDisplayName}#${bnetUser.cachedBungieGlobalDisplayNameCode}`;
 }
 
+/** do some stuff that demonstrates we have working oauth */
 function AuthenticatedTask() {
   const latestAuthed = getLatestOAuth(client_id)!.token.membership_id!;
   const authedClient = getOAuthHttpClient(api_key, client_id, client_secret, latestAuthed, { verbose: true });
