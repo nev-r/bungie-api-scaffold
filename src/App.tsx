@@ -95,7 +95,7 @@ function D2Item({ itemHash }: { itemHash?: number }) {
 
 // create an anonymous httpClient, (anonymous as in: no OAuth)
 // which can be used with functions from bungie-api-ts (like getCommonSettings() below)
-const httpClient = createHttpClient("5babcaaac7234197bff0e4e8a4e775de");
+const httpClient = createHttpClient(api_key);
 
 /** displays which destiny 2 season it is, according to bungie's global settings endpoint */
 function ThisSeason() {
