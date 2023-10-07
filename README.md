@@ -1,5 +1,13 @@
 bungie api react scaffold/template/tutorial/whatever
 
+this example of bungie api use in react, explains a few NPM modules and demonstrates their use.
+
+what this doesn't do is teach react. in fact it makes one or two bad-ish react decisions,
+like using `useEffect` instead of a smarter way of loading async data.
+this is ultimately meant for someone who knows, or is willing to learn from somewhere else, react.
+
+or you can just fiddle with it and customize it a tiny piece at a time :)
+
 easy steps:
 - clone, or download & unzip, this repo
 - `npm install`
