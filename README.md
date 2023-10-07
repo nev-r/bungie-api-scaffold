@@ -1,4 +1,4 @@
-bungie api react scaffold/template/tutorial/whatever
+## bungie api react scaffold/template/tutorial/whatever
 
 this example of bungie api use in react, explains a few bapi NPM modules and demonstrates their use.
 
