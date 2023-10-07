@@ -60,7 +60,7 @@ declare const BUNGIE_APP_INFO: {
 
 </details>
 
-⚠️ :) at some point vscode may start to complain :) ⚠️
+⚠️ :) at some point vscode may start to complain :) ⚠️  
 because it's still using its outdated typescript 4.  
 ctrl+shift+p, select typescript version, use workspace version.
 
