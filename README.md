@@ -8,7 +8,8 @@ this is ultimately meant for someone who knows, or is willing to learn from some
 
 or you can just fiddle with it and customize it a tiny piece at a time :)
 
-easy steps:
+<details><summary>easy steps</summary>
+
 - clone, or download & unzip, this repo
 - `npm install`
 - configure your `BUNGIE_APP_INFO` in `vite.config.ts`
@@ -23,9 +24,11 @@ easy steps:
     - `https://localhost:5173`   by default
 - `npm run dev`
 
-<hr/>
+</details>
 
-from scratch steps:
+<details><summary>from scratch steps</summary>
+  
+
 - `npm create vite@latest`
   - give it a name
   - React
@@ -54,6 +57,15 @@ declare const BUNGIE_APP_INFO: {
   - Origin Header
     - `https://localhost:5173`   by default
 - `npm run dev`
+
+</details>
+
+⚠️ :) at some point vscode may start to complain :) ⚠️
+because it's still using its outdated typescript 4.  
+ctrl+shift+p, select typescript version, use workspace version.
+
+<hr/>
+<hr/>
 
 original vite README below:
 
