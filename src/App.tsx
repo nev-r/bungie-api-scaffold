@@ -1,12 +1,7 @@
 import { createHttpClient } from "@d2api/httpclient";
 import "./App.css";
-import { DefinitionsProvider, verbose, includeTables, loadDefs } from "@d2api/manifest-react";
-import {
-  getAllInventoryItemLiteDefs,
-  getInventoryItemLiteDef,
-  getSeasonDef,
-  getStatDef,
-} from "@d2api/manifest-web";
+import { DefinitionsProvider, verbose, includeTables, loadDefs, setApiKey } from "@d2api/manifest-react";
+import { getAllInventoryItemLiteDefs, getInventoryItemLiteDef, getSeasonDef, getStatDef } from "@d2api/manifest-web";
 import {
   BungieMembershipType,
   DestinyCharacterResponse,
@@ -24,15 +19,16 @@ import { GeneralUser, getBungieNetUserById, getMembershipDataForCurrentUser } fr
 import { getApplicationApiUsage } from "bungie-api-ts/app";
 // import { OAuthSetup } from "@d2api/d2oauth-react";
 
+const { api_key, client_id, client_secret } = BUNGIE_APP_INFO;
+
 // these initiate definitions download.
 // they're at the top level of this file, not within the react structure,
 // so that things start getting ready as soon as possible.
 verbose();
 includeTables(["InventoryItemLite", "Season", "Stat"]);
+setApiKey(api_key);
 // we're not awaiting this promise, just dispatching it to do its thing, while react builds the page
 loadDefs();
-
-const { api_key, client_id, client_secret } = BUNGIE_APP_INFO;
 
 function App() {
   const fallback = <b>hi, definitions are loading...</b>;
@@ -81,7 +77,7 @@ function App() {
 function D2Item({ itemHash }: { itemHash?: number }) {
   const allWeapons = getAllInventoryItemLiteDefs().filter((i) => i.itemType === DestinyItemType.Weapon);
   const aRandomWeapon = allWeapons[Math.floor(Math.random() * allWeapons.length)];
-  
+
   const itemDef = itemHash ? getInventoryItemLiteDef(itemHash) : aRandomWeapon;
   const name = itemDef?.displayProperties.name;
   const icon = itemDef?.displayProperties.icon;

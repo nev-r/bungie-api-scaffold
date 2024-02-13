@@ -12,16 +12,16 @@ or you can just fiddle with it and customize it a tiny piece at a time :)
 
 - clone, or download & unzip, this repo
 - `npm install`
-- configure your `BUNGIE_APP_INFO` in `vite.config.ts`
+- configure your `BUNGIE_APP_INFO` in `vite.config.ts` (using info found at https://www.bungie.net/en/Application)
 - optionally, configure your app for OAuth at https://www.bungie.net/en/Application
   - OAuth Client Type
     - Public or Confidential. Confidential preferred.
   - Redirect URL
-    - `https://localhost:5173/`   by default
+    - `https://localhost:5173/` by default
   - Scope
     - Read your Destiny 2 information
   - Origin Header
-    - `https://localhost:5173`   by default
+    - `https://localhost:5173` by default
 - `npm run dev`
 
 </details>
@@ -43,10 +43,10 @@ declare const BUNGIE_APP_INFO: {
   client_secret: string;
 };
 ```
-- set `isolatedModules` to `false` in `tsconfig.json`
+- set `isolatedModules` to `false` in `tsconfig.json`. fuck `isolatedModules`.
 - overwrite `src/App.tsx` with [the one in this repo](https://raw.githubusercontent.com/nev-r/bungie-api-scaffold/main/src/App.tsx)
 - make your `vite.config.ts` look like [this one](https://github.com/nev-r/bungie-api-scaffold/blob/main/vite.config.ts)
-- configure your `BUNGIE_APP_INFO` in `vite.config.ts`
+- configure your `BUNGIE_APP_INFO` in `vite.config.ts` (using info found at https://www.bungie.net/en/Application)
 - optionally, configure your app for OAuth at https://www.bungie.net/en/Application
   - OAuth Client Type
     - Public or Confidential. Confidential preferred.
@@ -62,12 +62,12 @@ declare const BUNGIE_APP_INFO: {
 
 ⚠️ :) at some point vscode may start to complain :) ⚠️  
 because it's still using its outdated typescript 4.  
-ctrl+shift+p, select typescript version, use workspace version.
+ctrl+shift+p, "select typescript version", use workspace version.
 
 <hr/>
 <hr/>
 
-original vite README below:
+original vite README below, regarding this base app template:
 
 # React + TypeScript + Vite
 
