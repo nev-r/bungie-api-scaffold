@@ -65,9 +65,9 @@ because it's still using its outdated typescript 4.
 ctrl+shift+p, "select typescript version", use workspace version.
 
 <hr/>
-<hr/>
 
-original vite README below, regarding this base app template:
+<details>
+  <summary>original vite README below, regarding this base app template:</summary>
 
 # React + TypeScript + Vite
 
@@ -96,3 +96,6 @@ If you are developing a production application, we recommend updating the config
 - Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
 - Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
 - Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+
+</details>
